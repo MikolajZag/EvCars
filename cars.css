@@ -1,0 +1,79 @@
+.car-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desc{
+    font-family: 'Source Code Pro', monospace;
+}
+.center{
+    justify-content: center;
+    display: flex;
+    
+}
+h3{
+    font-size: 2.5rem;
+}
+.font-size{
+    font-size: 1.8rem;
+}
+
+.btn-sec{
+    color:#ffffff;
+    text-decoration: none;
+    background-color:#1A2634;
+    padding: 1.6rem 2rem;
+    font-size: 1rem;
+    border-radius: .5rem;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    outline: none;
+    max-height:5rem;
+}
+.div-btn{
+  margin-left: 5rem;
+}
+@media (max-width: 1260px) {
+    .car-section{
+        display:block;
+    }
+    .desc{
+        margin-bottom: 3%;
+        justify-content: center;
+    }
+    .div-btn{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .font-size{
+        display: flex;
+        font-size: 2rem;
+    }
+    .footer{
+        margin-top: 2rem;
+        width: 100%;
+    }
+    .cars-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    .resp{
+        justify-content: center;
+        display: flex;
+  }
+  .btn-last{
+      margin-bottom: 50px;
+  }
+    
+}
+@media (max-width: 1260px) {
+    .font-size{
+        font-size: 1.3rem;
+    }
+    .btn-last{
+        margin-bottom: 90px;
+    }
+}
+

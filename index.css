@@ -1,0 +1,46 @@
+.presentation{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    padding-bottom: 30px;
+    
+}
+.cover{
+    display: flex;
+    margin:70px 20px 0px 0px ;
+    height: 50vh;
+}
+.cover img{
+    height:100%
+}
+.introduction{
+    flex: 1;
+}
+.cta{
+    padding-top: 50px;
+}
+@media only screen and (max-width:1360px){
+    .presentation{
+        flex-direction: column-reverse;
+    }
+    .introduction{
+        margin-top: 4vh;
+        text-align: center;
+    }
+    .cover img{
+        height: 80%;
+    }
+} 
+@media only screen and (max-width:800px){
+    .cover img {
+        height: 60%;
+    }
+}
+@media only screen and (max-width:550px){
+    .cover{
+        margin:70px 0 0 10px;
+    }
+    .cover img {
+        height: 40%;
+    }
+}

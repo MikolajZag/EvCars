@@ -1,0 +1,228 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 80vh;
+    margin: 0;
+    padding: 0;
+    background-color: #203E5F;
+    font-family: Poppins, sans-serif;
+    font-size: 1.25rem;
+    color:#fff;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    flex-grow: 1;
+}
+.height-grow{
+    display: flex;
+    flex-direction: column;
+}
+.navbar {
+    display: flex;
+    position:relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+.logo-name{
+    margin-left: 1.5rem;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    color:inherit;
+    text-decoration:none;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+.navbar-links a:hover {
+    color:#6b777a;
+}
+.navbar-links a:focus {
+    color:#6b777a;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 1rem;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+/* Content Page */
+.title{
+    font-weight: 700;
+    font-size: 3em;
+}
+.subtitle{
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom:1.5rem;
+}
+.btn{
+    color:#000000;
+    text-decoration: none;
+    background-color:#F9E3A3;
+    padding: 1.6rem 2rem;
+    font-size: 1.25rem;
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+/* Footer */
+.footer{
+    position: fixed;
+    justify-content: space-between;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1a2634;
+    color: inherit;
+    display: flex; 
+}
+.footer-a{
+    text-decoration: none;
+    color: inherit;
+}  
+.footer-a:hover{
+  color: #a0afb3;
+} 
+.footer-a:focus{
+  color:#6b777a;
+}
+/*Hamburger media */ 
+
+
+.hamburger{
+    display: none;
+    position: absolute;
+    padding: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    
+}
+.hamburger-box{
+    width: 35px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+.hamburger-inner{
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top:50%;
+    transform: translateY(-50%);  /* Center span  */
+    transition: background-color .3s .1s ease-in-out;
+}
+.hamburger-inner::before,
+.hamburger-inner::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    transition: transform .2s .2s ease-in-out;
+}
+.hamburger-inner::before{
+    top:-10px;
+}
+.hamburger-inner::after{
+    top:10px;
+}
+.hamburger--active .hamburger-inner{
+    background-color: transparent;
+}
+.hamburger--active .hamburger-inner::before{
+    transform:translateY(10px) rotate(45deg);
+}
+.hamburger--active .hamburger-inner::after{
+    transform:translateY(-10px) rotate(-45deg);
+}
+
+@media only screen and (max-width:600px){
+    .container{
+        padding: 0;
+    }
+    .logo-div{
+        margin-left: 1rem;
+    }
+    .hamburger{
+        display: flex;
+        padding: 0;
+        right:0;
+        margin: 1rem;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        flex-direction: column;
+    }
+    .navbar-links li{
+        text-align: center;
+    }
+    .navbar-links li:hover{
+        color:#6b777a;
+    }
+    .navbar-links.active{
+        display:inline-block;
+    }
+    .container-media{
+        margin: 0 1rem;
+    }
+    .footer-a{
+        display: none;
+    }  
+    .footer-span{
+        font-size: 1.05rem;
+        margin: 0 auto;
+    }
+}
+
